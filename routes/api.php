@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 # Barang Masuk
-Route::put('barang_masuk','BarangControllerAPI@BarangMasuk');
+Route::put('/barang_masuk/{id}','BarangControllerAPI@BarangMasuk');
 
 # Barang Keluar
-Route::put('barang_keluar','BarangControllerAPI@BarangKeluar');
+Route::put('/barang_keluar/{id}','BarangControllerAPI@BarangKeluar');

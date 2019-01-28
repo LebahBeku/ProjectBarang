@@ -10,7 +10,7 @@ class BarangControllerAPI extends Controller
     public function BarangMasuk(Request $request, $id){
         $stok =  $request->stok;
 
-        $barang = Barang::find($id);
+        $barang = \App\Barang::find($id);
         $barang->stok =  $barang->stok + $stok;
         $barang->save();
 
@@ -21,7 +21,7 @@ class BarangControllerAPI extends Controller
     public function BarangKeluar(Request $request, $id){
         $stok =  $request->stok;
 
-        $barang = Barang::find($id);
+        $barang = \App\Barang::find($id);
         $barang->stok =  $barang->stok - $stok;
         $barang->save();
 
